@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Pokemon</title>
+    <style>
+        .form-group {
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        .output-container {
+            background-color: #eee;
+        }
+
+        .poke-image {
+            width: 40%;
+            height: 100%;
+            text-align: center;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        .card-title {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .card {
+            border-top: none;
+            padding: 10px;
+        }
+
+        body {
+            width: 100%;
+            height: 1250px;
+            display: block;
+            position: relative;
+        }
+
+        body::after {
+            content: "";
+            background: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/pokemon-background-10.jpg") no-repeat center;
+            background-size: auto 100%;
+            opacity: 0.8;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Search For A Pokemon By Entering A Pokemon Name or A Random Number 0 and 802</label>
+                <input class="form-control mb-3" type="text" id="pokemon-search-box">
+                <a name="" id="" class="btn btn-primary search-pokemon-button mb-3" href="#goToPokemon" role="button">Search Pokemon</a>
+                <br>
+
+                <!--
+                <label>Enter Any Random Number between 0 and 802 To Search For A Pokemon</label>
+                <input class="form-control mb-3" type="number" id="pokemon-random-search-box">
+                <a name="" id="" class="btn btn-primary random-pokemon-button mb-3" href="#" role="button">Get a Random Pokemon</a> -->
+
+            </div>
+        </form>
+
+        <img src="https://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/08/tumblr_mmff7iUxxv1qhd8sao1_500-1439237403.gif?quality=.8&height=269&width=500"
+            id="goPokemon" width="100%" style="display:none;">
+        <div class="output-container">
+
+        </div>
+    </div>
+
+
+
+    <script src="pokemonAJAX.js"></script>
+    <script src="pokemonUI.js"></script>
+    <script src="pokemon.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js "></script>
+</body>
+
+</html>
